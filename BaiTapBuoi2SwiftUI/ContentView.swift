@@ -32,14 +32,11 @@ struct UserView: View {
     var height: String
 
     var body: some View {
-        HStack(alignment: .center, spacing: 16) {
-            GeometryReader { geo in
+        HStack(alignment: .center, spacing: 16){
                 Image(systemName: "person.circle.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: geo.size.height) // giữ tỷ lệ vuông theo chiều cao
                     .foregroundColor(.blue)
-            }
 //            .frame(width: 60) // bạn có thể chỉnh lại kích thước
 //            .padding(.vertical, 8)
 //            .padding(.horizontal,45)
@@ -48,7 +45,6 @@ struct UserView: View {
                     .font(.headline)
                 HStack {
                     Text("Weight: \(weight)")
-                    Spacer()
                     Text("Height: \(height)")
                 }
                 .font(.subheadline)
@@ -56,6 +52,7 @@ struct UserView: View {
             }
 //            .padding(.vertical, 8)
         }
+//        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
     }
 }
@@ -64,9 +61,14 @@ struct ContentView: View {
     var body: some View {
         UserView(name: "John Doe", weight: "86 kg", height: "180 cm")
             .frame(height: 100) // chiều cao mẫu
+        UserView(name: "John Doe", weight: "86 kg", height: "180 cm")
+            .frame(height: 100) // chiều cao mẫu
+        UserView(name: "John Doe", weight: "86 kg", height: "180 cm")
+            .frame(height: 100) // chiều cao mẫu
     }
 }
 
 #Preview {
     ContentView()
+//    UserView("fasd","fasdfa","afas")
 }

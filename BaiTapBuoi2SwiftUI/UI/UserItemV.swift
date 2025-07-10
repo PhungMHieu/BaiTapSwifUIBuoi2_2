@@ -19,28 +19,34 @@ struct UserItemV: View {
 //                    .aspectRatio(contentMode: .fit)
 //                    .frame(width: geo.size.height)
 //            }
-            HStack{
-                Spacer()
+            HStack{ 
                 Image(systemName: "person.circle.fill")
 //                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//                    .frame( maxHeight: .infinity)
-//                    .frame(width: geo.size.height) // giữ tỷ lệ vuông theo chiều cao
-                    .foregroundColor(.blue)
-                    .padding(0)
-                Spacer()
-            }.padding(0)
-            VStack(alignment: .leading) {
-//                Spacer()
-                HStack {
-                    Text("John Doe")
-                        .font(.headline)
+                    .scaledToFit()
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                    .frame(width: 100, height: 100)
+                    .clipShape(Circle())
+                VStack(alignment: .leading) {
+    //                Spacer()
+                    HStack {
+                        Text("John Doe")
+                            .font(.headline)
+                    }
+                    HStack{
+                        ExtractedView(title: "W", value: "86 kg")
+                        ExtractedView(title: "H", value: "180 cm")
+                    }
                 }
-                HStack{
-                    ExtractedView(title: "W", value: "86 kg")
-                    ExtractedView(title: "H", value: "180 cm")
-                }
+//                Image(systemName: "person.circle.fill")
+//                    .resizable()
+////                    .aspectRatio(contentMode: .fit)
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+////                    .frame(width: geo.size.height) // giữ tỷ lệ vuông theo chiều cao
+//                    .foregroundColor(.blue)
+//                    .padding()
             }
+            
+
         }
 //        Spacer()
     }
