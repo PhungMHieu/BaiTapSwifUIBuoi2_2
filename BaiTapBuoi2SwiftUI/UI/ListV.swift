@@ -18,8 +18,8 @@ struct ListV: View {
             Section(header: Text("J")) {
                 ForEach(data,id: \.self) { item in
                     UserItemV()
-                        .frame(maxWidth: .infinity, alignment: .leading) // nội dung tràn ngang
-//                        .listRowInsets(EdgeInsets())                     // xoá padding mặc định
+                        .frame(maxWidth: .infinity, alignment: .leading)
+//                        .listRowInsets(EdgeInsets())
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                     

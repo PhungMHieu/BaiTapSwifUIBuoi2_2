@@ -11,8 +11,9 @@ import SwiftUI
 struct BaiTapBuoi2SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            ListV()
+//            ProfileV()
+            InputFieldV(title: "First name", placeholder: "Enter first name")
+//            ListV()
         }
     }
 }

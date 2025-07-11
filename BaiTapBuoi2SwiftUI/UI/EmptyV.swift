@@ -27,11 +27,15 @@ struct EmptyV: View {
                 print("Button is tapped")
             } label: {
                 Text("Add Profile")
-                    .padding(.horizontal,31.5)
-                    .padding(.vertical, 12.5)
+//                    .padding(.horizontal,31.5)
+//                    .padding(.vertical, 12.5)
                     .font(.custom("SF-Pro", size: 18))
                     .foregroundStyle(Color.neutral5)
             }
+//            .background(.colorPrimary)
+//            .frame(maxWidth: .infinity)
+//            .background(.red)
+            .padding()
             .background(Color.colorPrimary)
             .cornerRadius(16)
 //            Text("Hello")
