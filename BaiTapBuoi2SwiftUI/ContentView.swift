@@ -32,7 +32,8 @@ struct UserView: View {
     var height: String
 
     var body: some View {
-        HStack(alignment: .center, spacing: 16){
+//        HStack(alignment: .center, spacing: 16){
+        HStack{
                 Image(systemName: "person.circle.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -60,11 +61,11 @@ struct UserView: View {
 struct ContentView: View {
     var body: some View {
         UserView(name: "John Doe", weight: "86 kg", height: "180 cm")
-            .frame(height: 100) // chiều cao mẫu
-        UserView(name: "John Doe", weight: "86 kg", height: "180 cm")
-            .frame(height: 100) // chiều cao mẫu
-        UserView(name: "John Doe", weight: "86 kg", height: "180 cm")
-            .frame(height: 100) // chiều cao mẫu
+//            .frame(height: 100) // chiều cao mẫu
+//        UserView(name: "John Doe", weight: "86 kg", height: "180 cm")
+////            .frame(height: 100) // chiều cao mẫu
+//        UserView(name: "John Doe", weight: "86 kg", height: "180 cm")
+//            .frame(height: 100) // chiều cao mẫu
     }
 }
 

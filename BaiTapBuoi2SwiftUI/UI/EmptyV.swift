@@ -29,7 +29,7 @@ struct EmptyV: View {
                 Text("Add Profile")
                     .padding(.horizontal,31.5)
                     .padding(.vertical, 12.5)
-                    .font(.system(size: 18))
+                    .font(.custom("SF-Pro", size: 18))
                     .foregroundStyle(Color.neutral5)
             }
             .background(Color.colorPrimary)

@@ -11,7 +11,8 @@ import SwiftUI
 struct BaiTapBuoi2SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            ListV()
         }
     }
 }

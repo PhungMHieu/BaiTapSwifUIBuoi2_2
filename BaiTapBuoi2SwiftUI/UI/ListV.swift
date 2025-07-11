@@ -14,17 +14,44 @@ struct ListV: View {
         ("Nguyen Van C")
     ]
     var body: some View {
-//        List{
-//            UserItemV()
-//            UserItemV()
-//            UserItemV()
-//        }
-        List(data, id: \.self) {item in
-            UserItemV()
+        List{
+            Section(header: Text("J")) {
+                ForEach(data,id: \.self) { item in
+                    UserItemV()
+                        .frame(maxWidth: .infinity, alignment: .leading) // nội dung tràn ngang
+//                        .listRowInsets(EdgeInsets())                     // xoá padding mặc định
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                    
+                }
+            }
         }
+        .listStyle(.grouped)                 // tránh paddin}
     }
 }
 
 #Preview {
     ListV()
 }
+
+//        List{
+//            UserItemV()
+//            UserItemV()
+//            UserItemV()
+//        }
+//        List(data, id: \.self) {item in
+//            UserItemV()
+//                .listRowBackground(Color.clear)
+//                .listRowSeparator(.hidden)
+//                .frame(maxWidth: .infinity, alignment: .leading)
+//                .listRowInsets(EdgeInsets())
+////                .padding()
+////                .frame()
+////                .background(.neutral5)
+////                .cornerRadius(10)
+////                .padding()
+//        }
+//        .scrollContentBackground(.hidden)
+////        .lineLimit(.none)
+//        .background(.colorPrimary)
+////        .padding()
